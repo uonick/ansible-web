@@ -1,0 +1,11 @@
+---
+- hosts: web
+  remote_user: root
+  become: yes
+  become_method: sudo
+  roles:
+    - common
+    - nginx
+    - php
+    - mysql
+    - redis
