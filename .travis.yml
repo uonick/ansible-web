@@ -1,0 +1,16 @@
+---
+language: python
+python: "3"
+
+sudo: false
+
+addons:
+  apt:
+    packages:
+    - python-pip
+
+install:
+  - pip install ansible
+
+script:
+  - ansible-playbook playbook.yml -i inventory --syntax-check
