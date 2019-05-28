@@ -1,16 +1,15 @@
 ---
+dist: xenial
 language: python
 python: "3.3"
 
 sudo: false
 
-addons:
-  apt:
-    packages:
-    - python-pip
-
-install:
-  - pip install ansible
+before_install:
+  - apt-get update
+  - apt-get install -y software-properties-common
+  - apt-add-repository --yes --update ppa:ansible/ansible
+  - apt-get install ansible  
 
 script:
   - ansible-playbook playbook.yml -i inventory --syntax-check
