@@ -3,6 +3,7 @@ packages:
   - software-properties-common
   - build-essential
   - libmagickwand-dev
+  - dirmngr
   - lsb-core
   - autoconf
   - unzip
